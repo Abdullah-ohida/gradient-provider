@@ -31,6 +31,7 @@ function changeGradient(firstcolor, secondcolor) {
     }else {
         linear.style.background = `linear-gradient(${degree.value}deg, ${fCol}, ${sCol})`;
         css.textContent = `linear-gradient(${degree.value}deg, ${fCol}, ${sCol})`;
+        degree.value = "";
     }
 };
 
