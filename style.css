@@ -69,7 +69,6 @@ h3{
 
 
 .click{
-    /* transform: scale(1.1); */
     animation: bounce 0.2s ease-in-out;
 
 }
@@ -80,7 +79,6 @@ h3{
    padding: 1rem;
    background-color: black;
    border: none;
-   /* animation: bounce 0.3s ease-in-out; */
    transition: all 0.5s linear;
 }
 

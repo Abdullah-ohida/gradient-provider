@@ -94,22 +94,3 @@ copy.forEach(item => {
     })
 });
 
-// submitBtn.addEventListener('click', (color1, color2, angle )  => {
-//     // console.log(degree.value)
-//     angle = degree.value;
-
-//     changeGradient()
-// } )
-// function getInputValue(){
-//     submitBtn.addEventListener('click', function(){
-//         if(inputDeg.value > 360){
-//             alert("Input value between 0 to 360")
-//         }else{
-//             console.log(inputDeg.value)
-//             inputDeg.value = ""
-//         }
-//     });
-//     return inputDeg.value;
-// }
-
-// getInputValue();
