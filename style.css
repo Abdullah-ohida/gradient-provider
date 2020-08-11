@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    background: linear-gradient(to right, #24de88, #0e3a88);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+h1{
+    text-transform: capitalize;
+    font-family: cursive;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    letter-spacing: 3px;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+input{
+    margin-bottom: 1rem;
+}
+
+h2{
+    text-transform: capitalize;
+    font-family: sans-serif;
+    color: rgb(70, 69, 69);
+    font-weight: bolder;
+    letter-spacing: 3px;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+h3{
+    font-family: sans-serif;
+    color: rgb(187, 237, 246);
+    font-weight: lighter;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-family: cursive;
+}
+
+.btn{
+    padding: 0.5rem 1rem;
+    outline: none;
+    border-radius: 3px;
+    border: none;
+    text-transform: capitalize;
+    font-size: 1rem;
+    color: white;
+    background-color: black;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+.btn:hover{
+    color: black;
+    background-color: white;
+}
+
+
+.click{
+    /* transform: scale(1.1); */
+    animation: bounce 0.2s ease-in-out;
+
+}
+
+.copy{
+   opacity: 0;
+   width: 200px;
+   padding: 1rem;
+   background-color: black;
+   border: none;
+   /* animation: bounce 0.3s ease-in-out; */
+   transition: all 0.5s linear;
+}
+
+
