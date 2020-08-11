@@ -6,19 +6,37 @@ const btn = document.querySelector('.btn');
 const output1 = document.querySelector('.output1');
 const output2 = document.querySelector('.output2');
 const copy = document.querySelectorAll('.copy');
-const inputDeg = document.querySelector('.deg');
-const submitbtn = document.querySelector('.submit');
-
+const degree = document.querySelector('.degree');
+const submitBtn = document.querySelector('.submit');
 
 [colorbox1, colorbox2].forEach(colorbox => colorbox.addEventListener('input', () => {
     linear.style.background = `linear-gradient(to right, ${colorbox1.value}, ${colorbox2.value})`
 }))
-
+    let fCol = '';
+    let sCol = '';
 function changeGradient(firstcolor, secondcolor) {
     let angle = Math.floor(Math.random() * 360);
-    linear.style.background = `linear-gradient(${angle}deg, ${firstcolor}, ${secondcolor})`;
-    css.textContent = `linear-gradient(${angle}deg, ${firstcolor}, ${secondcolor})`;
+    fCol = firstcolor;
+    sCol = secondcolor;
+    if(degree.value === '') {
+        linear.style.background = `linear-gradient(${angle}deg, ${firstcolor}, ${secondcolor})`;
+        css.textContent = `linear-gradient(${angle}deg, ${firstcolor}, ${secondcolor})`;
+    } else if(degree.value > 360){
+        Swal.fire({
+            title: 'Input value between 0 to 360',
+            toast: true,
+            width: 600,
+            padding: '3em',
+          })
+    }else {
+        linear.style.background = `linear-gradient(${degree.value}deg, ${fCol}, ${sCol})`;
+        css.textContent = `linear-gradient(${degree.value}deg, ${fCol}, ${sCol})`;
+    }
 };
+
+submitBtn.addEventListener('click', () => {
+    changeGradient(fCol, sCol)
+})
 
 btn.addEventListener('click', doprocess);
 
@@ -48,7 +66,7 @@ function doprocess() {
     changeGradient(colors[0], colors[1])
     colorbox1.value = colors[0]
     colorbox2.value = colors[1];
-    copy.forEach(item => item.style.opacity = 1);
+    copy.forEach(item => item.style.display = 'inline-block');
 }
 
 copy.forEach(item => {
@@ -74,3 +92,23 @@ copy.forEach(item => {
         })
     })
 });
+
+// submitBtn.addEventListener('click', (color1, color2, angle )  => {
+//     // console.log(degree.value)
+//     angle = degree.value;
+
+//     changeGradient()
+// } )
+// function getInputValue(){
+//     submitBtn.addEventListener('click', function(){
+//         if(inputDeg.value > 360){
+//             alert("Input value between 0 to 360")
+//         }else{
+//             console.log(inputDeg.value)
+//             inputDeg.value = ""
+//         }
+//     });
+//     return inputDeg.value;
+// }
+
+// getInputValue();

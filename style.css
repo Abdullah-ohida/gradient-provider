@@ -12,6 +12,7 @@ body{
     justify-content: center;
     width: 100%;
     min-height: 100vh;
+    padding: 0 1rem;
 }
 
 h1{
@@ -31,7 +32,7 @@ input{
 h2{
     text-transform: capitalize;
     font-family: sans-serif;
-    color: rgb(70, 69, 69);
+    color: rgb(161, 159, 159);
     font-weight: bolder;
     letter-spacing: 3px;
     font-size: 1.5rem;
@@ -61,7 +62,7 @@ h3{
     cursor: pointer;
     transition: all 0.5s linear;
 }
-.btn:hover{
+.btn:hover, .submit:hover{
     color: black;
     background-color: white;
 }
@@ -74,13 +75,33 @@ h3{
 }
 
 .copy{
-   opacity: 0;
+   display: none;
    width: 200px;
    padding: 1rem;
    background-color: black;
    border: none;
    /* animation: bounce 0.3s ease-in-out; */
    transition: all 0.5s linear;
+}
+
+.degree{
+    width: 150px;
+    height: 30px;
+    padding-left: 0.2rem;
+    border: none;
+    border-radius: 3px;
+}
+.submit{
+    height: 30px;
+    text-transform: capitalize;
+    color: white;
+    background-color: black;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.5s linear;
+    border: none;
+    padding: 0 0.5rem;
+    border-radius: 3px;
 }
 
 
